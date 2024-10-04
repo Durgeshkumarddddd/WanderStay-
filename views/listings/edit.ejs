@@ -1,0 +1,38 @@
+<%- layout('./layout/boilerplate') %>
+<body>
+      <h3>Edit Listing</h3>
+      <form  method="Post" enctype="multipart/form-data" action="/listings/<%= listing._id %>?_method=PUT">
+        <div class="mb-3">
+          <label for="title" class="form-label"> Title </label>
+          <input name="listing[title]" type="text" value="<%= listing.title %>" class="form-control">
+        </div>
+        <div class="mb-3">
+              <label for="" class="form-label">Original Image</label><br>
+              <img class="e-image" src="<%= OriginalUrl %>" alt="">
+        </div>
+        <div class="mb-3">
+          <label for="title" class="form-label">Upload New Image</label>
+          <input  name="listing[image]"  type="file" class="form-control">
+        </div>
+       <div class="mb-3">
+        <label for="title" class="form-label">Description</label>
+        <textarea  name="listing[description]" id="" class="form-control"><%= listing.description %></textarea>
+       </div>
+       <div class="row mb-3">
+        <div class="col mb-3">
+          <label for="title" class="form-label">Price</label>
+          <input  name="listing[price]"  type="text" value="<%= listing.price %>" class="form-control">
+         </div>
+         <div class="col mb-3">
+          <label for="title" class="form-label">Country</label>
+          <input  name="listing[country]"  type="text" value="<%= listing.country %>" class="form-control">
+         </div>
+       </div>
+       <div class="mb-3">
+        <label for="title" class="form-label">Location</label>
+        <input  name="listing[location]"  type="text" value="<%= listing.location %>" class="form-control">
+       </div>  
+        <button> Update </button>
+      </form>
+
+</body>

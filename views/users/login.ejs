@@ -1,0 +1,16 @@
+<%- layout("./layout/boilerplate") %>
+
+<div class="row "></div>
+        <h1 class="offset-2"> Login user </h1>
+    <form method="post" action="/login" >
+        <div class="col-6 offset-2 mt-3">
+            <label for="username" class="form-label-lg form-label ">Enter Username</label>
+            <input name="username" class="form-control " type="text" aria-label=".form-control-lg example" required>
+        </div>
+        <div class="col-6 offset-2 mt-3">
+            <label for="inputPassword5" class="form-label">Enter Password </label>
+            <input name="password" type="password" id="inputPassword5" class="form-control " aria-describedby="passwordHelpBlock"  required>
+        </div>
+            <button class="btn bg-success offset-2 mt-4 mb-4">login</button>
+     </form>
+</div>     

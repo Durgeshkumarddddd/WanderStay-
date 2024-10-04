@@ -1,0 +1,101 @@
+body {
+   display: flex; 
+   flex-direction: column;
+   min-height: 100vh;
+}
+.container {
+    display: 1;
+}
+.navbar {
+    color : black  !important;
+}
+.navbar-icon {
+    color: #fe424f ;
+}
+/* Footer */
+.f-info-links a{
+    text-decoration: none;
+    color: #222;
+}
+.f-info-links a:hover {
+    text-decoration: underline;
+} 
+.f-info-links{
+    width: 100%;
+}
+.f-info-social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: 2rem;
+    vertical-align:middle;
+}
+.f-info-social-icon{
+    margin-left: 3rem;
+}
+.f-info{
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 8rem;
+
+}
+/* mycards style */
+.i-cards-container{
+    margin-top: 3rem;
+    text-wrap: wrap;
+    object-fit: cover;
+    gap: 20px;
+    justify-items: center; 
+
+}
+.cards{
+    width: 24rem ;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    display: inline-block;
+}
+.cards h5{
+    text-wrap: nowrap;
+    text-overflow:none;
+}
+.cards-img{
+    width: 24rem;
+    height: 18rem;
+    border-radius: 1rem;
+}
+.cards-body{
+    padding: 0px;
+    flex-direction: row;
+}
+ /* create listing */
+.d-cards-container {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 10vh ;
+}
+/* display listing */
+.show-img{ 
+ height:40vh ;
+ border-radius: 8px  !important ;
+}
+.btns{
+    display: flex;
+    margin-bottom: 3rem;
+}
+/* Reviews */
+.reviews{
+    display: flex;
+    flex-wrap: wrap;
+ }
+.card-link {
+    text-decoration: none;
+}
+.e-image {
+    height: 6rem ; 
+    width: 6rem ;
+}
