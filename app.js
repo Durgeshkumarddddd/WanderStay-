@@ -37,6 +37,9 @@ main()
   .catch((err) => {
     console.log(err);
   });
+  // For store data in Atlas database
+   let DB_URL = process.env.ATLASDB_URL;
+    //  i have to use database for storing data in Atlas database
 
 async function main() {
   await mongoose.connect("mongodb://127.0.0.1:27017/Go");

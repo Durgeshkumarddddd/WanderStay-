@@ -1,5 +1,25 @@
-
-    <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary " >
+  <style>  
+    .search-btn{
+      background-color: #fe424f ;
+      color: white;
+      border-radius:1.5rem;
+      padding: .5rem 2rem .5rem 2rem;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+    
+    }
+    .search-btn:hover{
+      background-color: #fe424f ;
+      color: white;
+    } 
+    .search-inp{
+      border-radius:1.5rem;
+      padding:.5rem 2rem;
+    }
+  </style>
+    <nav class="navbar navbar-expand-md sticky-top mynavbar ">
     <div class="container-fluid" >
       <a class="navbar-icon" href="/"> <i class="fa-regular fa-compass"></i> </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,31 +27,33 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link " aria-current="page" href="">Home</a>
-          <a class="nav-link" href="/listings">All Listings</a>
-          <a class="nav-link" href="/listings/new">Create New Listing</a>
+          <a class="nav-link ms-3" aria-current="page" href="/listings">Explore</a>
         </div>
+
+       <div class="navbar-nav ms-auto s_btn">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 search-inp" type="search" placeholder="Search Destination" aria-label="Search">
+          <button class="btn search-btn" type="submit">
+            <i class="fa-solid fa-magnifying-glass "></i>
+            Search
+          </button>
+        </form>
+  
+       </div> 
       <div class="navbar-nav ms-auto " >
+        <a class="nav-link" href="/listings/new"> Add New Listing </a>
+
         <% if (!currUser){  %>
-          <a class="nav-link" href="/signup">Sign up</a>
-          <a style="margin-inline: 10px;" class="nav-link" href="/login">Log in</a>
+          <a class="nav-link" href="/signup"> <b> Sign up </b> </a>
+          <a style="margin-inline: 10px;" class="nav-link" href="/login"> <b>Log in</b> </a>
       <%  } %>
       <% if(currUser){ %>
-        <a class="dropdown-item" href="/logout">Log out</a>
+        <a class="dropdown-item" href="/logout"><b> Log out </b> </a>
      <% } %>
       </div>
-      
-  <!--<div class="navbar-nav ms-auto dropdown " style="margin-right:10rem;">
-       < <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-solid fa-bars"></i></a> 
-        <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="/signup">Sign up</a></li>
-        <li><a class="dropdown-item" href="/login">Log in</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="/logout">Log out</a></li>
-      </ul>
-        </div> -->
       </div>
     </div>
   </nav>
+
 
     

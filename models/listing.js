@@ -20,9 +20,14 @@ const ListingSchema = new Schema({
     owner : {
         type : Schema.Types.ObjectId ,
         ref : "User"
-    }
+    },
+    category : [{
+        type : String ,
+        enum : ["trending", "amazingView", "castel", "iconicCitys", "mountainCitys", "tropical", "amazingPools", "beachfront", "Lakefront", "treehouse", "hospitals", ],
+    }],
+
 })
-//Delete all review related to listing
+// Delete all review related to listing
 
 ListingSchema.post("findOneAndDelete", async (listing)=>{
   if(listing){

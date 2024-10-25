@@ -1,39 +1,48 @@
 body {
-   display: flex; 
-   flex-direction: column;
-   min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-.container {
-    display: 1;
-}
+
 .navbar {
-    color : black  !important;
+    color: black !important;
+    background-color:white ;
+    border-bottom: 1px solid rgb(236, 219, 219);
+    height: 4rem;         
 }
+
+
 .navbar-icon {
-    color: #fe424f ;
+    color: #fe424f;
 }
+
 /* Footer */
-.f-info-links a{
+.f-info-links a {
     text-decoration: none;
     color: #222;
 }
+
 .f-info-links a:hover {
     text-decoration: underline;
-} 
-.f-info-links{
+}
+
+.f-info-links {
     width: 100%;
 }
+
 .f-info-social {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-right: 2rem;
-    vertical-align:middle;
+    vertical-align: middle;
 }
-.f-info-social-icon{
+
+.f-info-social-icon {
     margin-left: 3rem;
 }
-.f-info{
+
+.f-info {
     background-color: #ebebeb;
     display: flex;
     flex-wrap: wrap;
@@ -43,59 +52,77 @@ body {
     height: 8rem;
 
 }
+
 /* mycards style */
-.i-cards-container{
+.i-cards-container {
     margin-top: 3rem;
     text-wrap: wrap;
     object-fit: cover;
     gap: 20px;
-    justify-items: center; 
+    justify-items: center;
 
 }
-.cards{
-    width: 24rem ;
+
+.cards {
+    width: 24rem;
     margin-bottom: 2rem;
     margin-left: 2rem;
+    color: black;
     display: inline-block;
 }
-.cards h5{
+
+.cards h5 {
     text-wrap: nowrap;
-    text-overflow:none;
+    text-overflow: none;
 }
-.cards-img{
+
+.cards-img {
     width: 24rem;
     height: 18rem;
     border-radius: 1rem;
 }
-.cards-body{
+
+.cards-body {
     padding: 0px;
     flex-direction: row;
 }
- /* create listing */
+
+/* create listing */
 .d-cards-container {
     display: inline-block;
     justify-content: center;
     align-items: center;
-    height: 10vh ;
+    height: 10vh;
 }
+
 /* display listing */
-.show-img{ 
- height:40vh ;
- border-radius: 8px  !important ;
+.show-img {
+    height: 40vh;
+    border-radius: 8px !important;
 }
-.btns{
+
+.btns {
     display: flex;
     margin-bottom: 3rem;
 }
+
 /* Reviews */
-.reviews{
+.reviews {
     display: flex;
     flex-wrap: wrap;
- }
+}
+
 .card-link {
     text-decoration: none;
 }
+
 .e-image {
-    height: 6rem ; 
-    width: 6rem ;
+    height: 6rem;
+    width: 6rem;
+}
+
+#map {
+      height: 400px;
+      width: 80vw;
+      
 }

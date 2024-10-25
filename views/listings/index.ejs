@@ -3,9 +3,91 @@
       <form method="get" action="/listing/new">
         <button>Create new Listing</button>
       </form> -->
-    
-    <h2> All Listings </h2>
-       
+      <style>
+        .filters{
+        width:100%;
+        background: white;
+        border: 1px solid rgb(228, 247, 251);
+         margin:3rem;
+         margin-top: 2rem;
+         display: flex;
+         align-items: center;
+        }
+        .filter{
+        margin-right: 1.5rem;
+        text-align: center;
+        opacity: 0.7;
+        }
+        .filter:hover{
+          opacity: 1;
+          cursor: pointer;
+        }
+        .addtax{
+          display : none;
+        }
+        .checkbox{
+          border: 1px solid rgb(236, 220, 220);
+          border-radius:0.5rem;
+          padding: 0.5rem;
+          margin-bottom: 1rem;
+        }
+      
+      </style>
+
+       <div class="filters sticky " >
+        
+         <div class="filter">
+          <i class="fa-solid fa-fire"></i>
+           <p>Trend</p>
+         </div>
+         <div class="filter">
+          <i class="fa-brands fa-wpforms"></i>
+          <p> Amazing view</p>
+        </div>
+        <div  class="filter">
+          <i class="fa-brands fa-fort-awesome"></i>
+          <p>castel</p>
+        </div>
+        <div class="filter">
+          <i class="fa-solid fa-city"></i>
+          <p>iconic citys</p>
+        </div>
+        <div class="filter">
+          <i class="fa-solid fa-mountain-city"></i>
+          <p>mountain city</p>
+        </div>
+        <div class="filter">
+          <i class="fa-solid fa-tree"></i>
+          <p>tropical</p>
+        </div>
+        <div class="filter">
+          <i class="fa-solid fa-water-ladder"></i>
+          <p>amazing pools</p>
+        </div>
+        <div class="filter">
+          <i class="fa-solid fa-umbrella-beach"></i>
+          <p>beach front</p>
+        </div>
+        <div class="filter">
+          <i class="fa-solid fa-water"></i>
+          <p>Lakefront</p>
+        </div>
+        <div class="filter">
+          <i class="fa-solid fa-tree-city"></i>
+          <p>Treehouse</p>
+        </div>
+        <div  class="filter">
+          <i class="fa-solid fa-hospital"></i>
+          <p>hospital</p>
+        </div>
+        <div class="checkbox">
+          <div class=" form-check form-switch  form-check-reverse ">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label " for="flexSwitchCheckDefault"> display after taxes</label>
+          </div>
+        </div>
+     </div>
+
       <div class="i-cards-container">
         <% for(let Listing of AllListings){ %>
           <a href="/listings/<%= Listing._id %>">
@@ -13,12 +95,27 @@
             <img class="cards-img" src="<%= Listing.image.url %>" alt="">
             <div class="card-body">
             <h5> <%= Listing.title %> </h5> 
-               <p> &#x20B9; <%= Listing.price.toLocaleString('en-IN') %> </p> 
+            <p> &#x20B9; <%= Listing.price.toLocaleString('en-IN') %> /night 
+              <i class="addtax">&nbsp; +18% GST </i>
+            </p>
             </div>
        </div>
         </a>
           <% } %>
        </div>
 
+  <script>
+      let taxSwitch = document.getElementById("flexSwitchCheckDefault")
+      taxSwitch.addEventListener("click" , ()=>{
+        let  tax_info = document.getElementsByClassName("addtax")
+        for( info of tax_info ){
+          if(info.style.display != "inline" ){
+            info.style.display = "inline" 
+          }else{
+            info.style.display = "none"
+          }
+        }
+      })
+  </script>
 
  
