@@ -20,6 +20,7 @@ const passport = require("passport");
 const { register } = require("module");
 const LocalStrategy = require("passport-local");
 const review = require("./routers/review");
+const MongoStore = require('connect-mongo');
 
 // use ejs-locals for all ejs templates:
 app.engine("ejs", ejsMate);
@@ -51,7 +52,7 @@ app.set("view engine", "ejs");
 // Session middleware
 app.use(
   session({
-    secret: "keyboard cat",
+    secret: "mySecret",
     resave: false,
     saveUninitialized: true, 
     cookie: {
@@ -59,6 +60,7 @@ app.use(
       maxAge: 7 * 24 * 60 * 60 * 100,
       httpOnly: true,
     },
+    store: MongoStore.create(options)
   })
 );
   
