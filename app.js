@@ -31,6 +31,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
 
+
+// For store data in Atlas database
+let dburl = process.env.ATLASDB_URL;
+//  i have to use database for storing data in Atlas database
+
 main()
   .then((res) => {
     console.log("Connected to Db");
@@ -38,32 +43,41 @@ main()
   .catch((err) => {
     console.log(err);
   });
-  // For store data in Atlas database
-   let DB_URL = process.env.ATLASDB_URL;
-    //  i have to use database for storing data in Atlas database
 
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/Go");
+  await mongoose.connect(dburl);
 
   // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
 }
-app.set("view engine", "ejs");
+
+// To store data in Atlas database
+let dbStore = MongoStore.create({
+  mongoUrl: process.env.ATLASDB_URL,  
+  touchAfter: 24 * 3600, // time period in seconds to update session when any change in server
+  crypto: {
+    secret: 'Mysecret'
+  }
+
+})
+dbStore.on("error", (error) => { console.log("Error in mongo Session store", error); });
+
+
 
 // Session middleware
 app.use(
   session({
+    store : dbStore,
     secret: "mySecret",
     resave: false,
-    saveUninitialized: true, 
+    saveUninitialized: true,
     cookie: {
       expires: Date.now() + 7 * 24 * 60 * 60 * 100,
       maxAge: 7 * 24 * 60 * 60 * 100,
-      httpOnly: true,
     },
-    store: MongoStore.create(options)
+
   })
 );
-  
+
 // search passport-local-strategy
 // Initialize Passport
 app.use(passport.initialize());

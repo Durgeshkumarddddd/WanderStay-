@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "20.11.1"
+  },
   "name": "go",
   "version": "1.0.0",
   "main": "",
@@ -10,7 +13,7 @@
   "keywords": [],
   "description": "",
   "dependencies": {
-    "cloudinary": "^2.5.1",
+    "cloudinary": "^1.41.3",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^5.1.0",
     "cookie": "^0.6.0",

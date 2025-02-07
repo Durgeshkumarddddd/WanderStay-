@@ -4,9 +4,10 @@ module.exports.listingSchema = Joi.object({
         title : Joi.string().required(),
         description : Joi.string().required(),
         //  image : Joi.string().allow("",null),
-         price : Joi.number().required().min(0),
+        price : Joi.number().required().min(0),
         country : Joi.string().required(),
         location : Joi.string().required(),
+        category: Joi.string().required(),
     }).required()
 })
 module.exports.reviewSchema = Joi.object({

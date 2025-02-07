@@ -1,10 +1,9 @@
 <%- layout("./layout/boilerplate") %>
-    <div class="row ">
-     <div class="col-8 offset-2">
+     <div class="offset-2">
         <br><br>
     <h3>Create New Listing</h3>
     <div class="c-listing-container">
-        <form  method="post" action="/listings" enctype="multipart/form-data"  novalidate class=" needs-validation "  >
+        <form  method="post" action="/listings" enctype="multipart/form-data"  novalidate class="needs-validation "  >
     
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
@@ -59,18 +58,17 @@
                     <option value="iconicCity">iconic citys</option>
                     <option value="tropical">tropical cities</option>
                     <option value="amazingPools">amazing pools</option>
-                    <option value="beachfront">beach front</option>
+                    <option value="beachfront">beach front</option> 
                     <option value="lakefront">Lake front</option>
                     <option value="treehouse">Treehouse</option>
                     <option value="hospitals">hospitals</option>
                 </select>
                 <div class="invalid-feedback">Select a category
             </div>
-            <button class="btn btn-dark mt-4"> Create </button>
+            <button class="btn btn-danger mt-4 mb-4"> Create </button>
            <br><br>
         </form>
     </div>
-</div>
 </div>
 
 

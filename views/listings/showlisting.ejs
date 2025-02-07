@@ -1,5 +1,5 @@
 <%- layout('./layout/boilerplate') %>
-<div class="row">
+<div class="row ">
             <div class="Card col-6 offset-2">
                     <h5><%= listing.title %> </h5>
                     <img src="<%= listing.image.url %> " class="show-img-top col-7" alt="show-img">
@@ -23,7 +23,7 @@
     </form> 
 </div>
 
-<div class=" col-8 mb-3 offset-2">
+<div class=" col-8 mb-3 offset-3">
     <% if(currUser && currUser._id.equals(listing.owner._id)){ %> 
     <form method="post" action="/listings/<%= listing._id %>/reviews">
         <div class="row">
@@ -32,7 +32,6 @@
             <div class="col-8 mb-4">
                 <label for="rating" class="form-label"> Rating </label>
                 <fieldset class="starability-slot">
-                    <input class=" form-range " min="1" max="5" name="review[rating]"  >
                     <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked aria-label="No rating." />
                     <input type="radio" id="first-rate1" name="review[rating]" value="1" />
                     <label for="first-rate1" title="Terrible">1 star</label>
@@ -44,8 +43,9 @@
                     <label for="first-rate4" title="Very good">4 stars</label>
                     <input type="radio" id="first-rate5" name="review[rating]" value="5" />
                     <label for="first-rate5" title="Amazing">5 stars</label>
-                  </fieldset>
+                </fieldset>
             </div>
+            
             <div class="col-8 mb-4">
                 <label for="comment" class="form-label"> Comment </label>
                 <textarea name="review[comment]" id="" class="form-control" rows="3" cols="6" required ></textarea>
@@ -78,7 +78,7 @@
   <% }  %>
 </div>
 </div>
-<div class=" col-8 mb-3 offset-2">
+<!-- <div class=" col-8 mb-3 offset-2">
     <h1>Where you'll be</h1>
     <div id="map"></div>
      
@@ -94,7 +94,7 @@
         });
     </script>
 
-</div>
+</div> -->
 
  
 

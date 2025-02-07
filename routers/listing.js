@@ -5,6 +5,7 @@ const wrapAsync = require('../ErrorHandler/wrapAsync')
 const { listingSchema } = require('../Schema');
 const { isLoggedIn, isOwner } = require('../middleware');
 const listingCont = require('../controller/listing');
+const ExpressError = require('../ErrorHandler/expressError');
 const path = require("path");
 const multer = require('multer');  // Correctly require the module
 const { storage } = require('../cloudConfig')
@@ -14,7 +15,7 @@ const validatelisting = (req, res, next) => {
   let { error } = listingSchema.validate(req.body)
   if (error) {
     let ErrMsg = error.details.map(e => e.message).join(",")
-    throw new ExpressError(400, ErrMsg)
+    throw new ExpressError(400, ErrMsg);
   }
   else {
     next();
@@ -25,7 +26,7 @@ const validatelisting = (req, res, next) => {
 router.get('/', wrapAsync(listingCont.AllListings));
 
 //Create new listing
-router.get('/new', isLoggedIn, listingCont.newListing)
+router.get('/new', isLoggedIn, listingCont.newListing);
 
 //create new Listing
 router.post('/', isLoggedIn, upload.single('listing[image]'), validatelisting, wrapAsync(listingCont.AddListing))

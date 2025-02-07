@@ -1,6 +1,5 @@
 const User = require('../models/users')
 
-
 // signup get
 module.exports.signuppage =  (req, res)=>{
     res.render("users/signup.ejs")

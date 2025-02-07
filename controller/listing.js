@@ -7,6 +7,7 @@ module.exports.AllListings = async (req, res) => {
   res.render('listings/index.ejs', { AllListings })
 }
 
+
 //Create new listing
 module.exports.newListing = (req, res) => {
   // if(!req.isAuthenticated()){
