@@ -1,55 +1,49 @@
-![image](https://github.com/user-attachments/assets/faca9214-c993-4724-bca5-59c255ad7389)
+# 🏕️ WanderStay - Explore. Stay. Wander.
 
-Project Description: Go-WordWander
-Go-WordWander is an innovative web application designed to make book renting effortless and accessible. This platform connects book lovers with nearby bookstores and rental shops, allowing users to explore, rent, and enjoy books without the need for long-term purchases.
-
-Key Features:
-📍 Find Nearby Book Rentals – Users can search for books available for rent from local stores.
-📖 Wide Collection of Books – From fiction to academic resources, users can browse various genres.
-🔄 Seamless Renting Process – Easy reservation and pickup system for a hassle-free experience.
-👤 User-Friendly Interface – Clean, interactive, and simple UI for a smooth experience.
-💬 Reviews & Ratings – Users can share their experiences and rate book rentals.
-
-Purpose & Benefits:
-Encourages Sustainable Reading – Reduces book waste by promoting rentals instead of purchases.
-Affordable for Readers – Makes books more accessible to students and book enthusiasts.
-Empowers Local Bookstores – Helps small shops reach more customers through digital access.
-Enhances Reading Culture – Encourages more people to explore books conveniently.
-Target Audience:
-📚 Students – Rent academic books affordably.
-📖 Book Lovers – Discover and read without committing to buying.
-🏪 Local Bookstores – Expand their reach and customer base.
-
-Go-WordWander aims to revolutionize how people access books by merging convenience, affordability, and the love of reading into one platform. 🚀📚
-
-
-## **📢 How to Contribute**  
-
-💡 **Got ideas? Found a bug?** We’d love your contributions!  
-Follow these steps:  
-
-1. **Fork the repository**  
-2. **Create a new feature branch**  
-   ```bash
-   git checkout -b feature-name
-   ```
-3. **Commit changes**  
-   ```bash
-   git commit -m "Add feature XYZ"
-   ```
-4. **Push to GitHub**  
-   ```bash
-   git push origin feature-name
-   ```
-5. **Submit a Pull Request** 🚀  
+**WanderStay** is a full-stack web application that allows users to discover and book accommodations based on scenic locations like beaches, mountains, forests, and more. Whether you're looking for a cozy mountain cabin, a beachside villa, or a forest retreat, WanderStay brings wanderers and hosts together on a seamless and intuitive platform.
 
 ---
 
+## 🌍 Features
+
+- 🔍 **Search by Location** – Find stays based on destination type (Beach, Mountain, Forest, etc.)
+- 🏠 **Host Listings** – Property owners can list accommodations with images, descriptions, and prices.
+- 🧳 **Booking System** – Users can book stays, see availability, and manage their bookings.
+- 🛡️ **Authentication** – Secure login/signup for users and hosts using Passport.js.
+- 📱 **Responsive Design** – Mobile-friendly and accessible interface.
+- 🌟 **User Experience** – Smooth animations and transitions for a modern look.
 
 ---
 
-## **👨‍💻 Developer & Contact**  
+## 🛠️ Tech Stack
 
-💬 **Questions? Need support?**  
-📧 Email: [contact on email](mailto:your.durgeshkumarddddd1234@gmail.com)  
-🔗 LinkedIn: [My Profile](www.linkedin.com/in/durgeshkumar)  
+### 👨‍💻 Frontend
+- HTML5, CSS3, JavaScript
+- Bootstrap for responsiveness
+- EJS templating engine for rendering dynamic views
+
+### ⚙️ Backend
+- Node.js with Express.js
+- MongoDB for database
+- RESTful APIs
+
+### 🔐 Authentication
+- Passport.js (`passport-local`, `passport-local-mongoose`)
+- express-session
+
+---
+
+## 📸 Screenshots
+
+> Add screenshots here showing homepage, search results, booking page, and login/signup modals.
+
+---
+
+## 🚀 Getting Started
+
+### 📦 Installation
+
+```bash
+git clone https://github.com/your-username/wanderstay.git
+cd wanderstay
+npm install
