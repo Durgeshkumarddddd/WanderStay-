@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/05ca959b-1f32-4bad-931f-ad1f869ac355)
+
 # 🏕️ WanderStay - Explore. Stay. Wander.
 
 **WanderStay** is a full-stack web application that allows users to discover and book accommodations based on scenic locations like beaches, mountains, forests, and more. Whether you're looking for a cozy mountain cabin, a beachside villa, or a forest retreat, WanderStay brings wanderers and hosts together on a seamless and intuitive platform.
@@ -47,3 +49,48 @@
 git clone https://github.com/your-username/wanderstay.git
 cd wanderstay
 npm install
+
+
+⚙️ Run Locally
+bash
+Copy
+Edit
+npm start
+Then open your browser and go to:
+http://localhost:3000
+
+🗂️ Folder Structure
+bash
+Copy
+Edit
+wanderstay/
+│
+├── public/             # Static assets (CSS, JS, images)
+├── views/              # EJS Templates
+├── models/             # Mongoose Models
+├── routes/             # Express Routes
+├── app.js              # Main server file
+├── package.json
+🤝 Contributing
+Contributions, issues and feature requests are welcome!
+Feel free to fork the repo and submit a pull request.
+
+📃 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+💡 Inspiration
+WanderStay was built with the vision of promoting eco-tourism and giving people easy access to nature-based stays across the country. It's not just a stay—it's a Wander Experience 🌲🌊🏔️
+
+👨‍💻 Developed By
+[Your Name] – Full Stack Developer
+🚀 MERN Stack | Passionate about solving real-world problems
+📫 [your-email@example.com]
+🌐 [Portfolio Link (if available)]
+
+yaml
+Copy
+Edit
+
+---
+
+Let me know if you'd like to include badges (build, license, etc.) or deployment links (like Render, Ve
