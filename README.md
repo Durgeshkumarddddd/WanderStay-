@@ -82,9 +82,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 WanderStay was built with the vision of promoting eco-tourism and giving people easy access to nature-based stays across the country. It's not just a stay—it's a Wander Experience 🌲🌊🏔️
 
 👨‍💻 Developed By
-[Your Name] – Full Stack Developer
+Durgesh Kumar – Full Stack Developer
 🚀 MERN Stack | Passionate about solving real-world problems
-📫 [your-email@example.com]
+📫 durgeshkumarddddd1234@gmail.com
 🌐 [Portfolio Link (if available)]
 
 yaml
