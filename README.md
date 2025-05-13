@@ -85,7 +85,7 @@ WanderStay was built with the vision of promoting eco-tourism and giving people 
 Durgesh Kumar – Full Stack Developer
 🚀 MERN Stack | Passionate about solving real-world problems
 📫 durgeshkumarddddd1234@gmail.com
-🌐 [Portfolio Link (if available)]
+🌐 Portfolio Link 
 
 yaml
 Copy
